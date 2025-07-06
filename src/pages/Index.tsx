@@ -1,214 +1,129 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/50 to-rose-100/50" />
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{
-            backgroundImage:
-              "url(/img/c80f1a7c-5eb3-4f9e-bbc8-cab4569ab2c1.jpg)",
-          }}
-        />
-        <div className="container mx-auto px-4 py-16 relative">
-          <div className="text-center space-y-6">
-            <div className="inline-flex items-center gap-2 text-rose-600 mb-4">
-              <Icon name="Heart" size={24} className="animate-pulse" />
-              <span className="text-sm font-medium tracking-wide uppercase">
-                Свадебное приглашение
-              </span>
-              <Icon name="Heart" size={24} className="animate-pulse" />
-            </div>
+      <div className="container mx-auto px-4 py-24">
+        <div className="text-center space-y-12 max-w-3xl mx-auto">
+          <div className="space-y-2">
+            <p className="text-sm font-light text-slate-400 tracking-widest uppercase">
+              Свадебное приглашение
+            </p>
+            <div className="w-12 h-px bg-slate-200 mx-auto" />
+          </div>
 
-            <h1 className="text-6xl md:text-8xl font-serif font-bold text-slate-800 mb-8">
-              <span className="block text-rose-600">Евгений</span>
-              <span className="text-2xl md:text-3xl font-light text-slate-600 mx-4">
-                &
-              </span>
-              <span className="block text-rose-600">Виктория</span>
-            </h1>
+          <h1 className="text-5xl md:text-7xl font-light text-slate-900 tracking-tight">
+            <span className="block">Евгений</span>
+            <span className="text-sm font-light text-slate-400 tracking-widest my-6 block">
+              &
+            </span>
+            <span className="block">Виктория</span>
+          </h1>
 
-            <div className="flex items-center justify-center gap-4 text-slate-600">
-              <Icon name="Calendar" size={20} />
-              <span className="text-xl font-light">06 сентября 2025</span>
-            </div>
-
-            <div className="flex items-center justify-center gap-4 text-slate-600">
-              <Icon name="MapPin" size={20} />
-              <span className="text-lg font-light">
-                Кузнецк, ул. Кирова, д. 157
-              </span>
-            </div>
+          <div className="space-y-4 text-slate-600">
+            <p className="text-lg font-light tracking-wide">06.09.2025</p>
+            <p className="text-base font-light">Кузнецк, ул. Кирова, 157</p>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Invitation Card */}
-          <Card className="bg-white/80 backdrop-blur-sm border-rose-200 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="space-y-6">
-                <div className="flex justify-center mb-6">
-                  <div className="relative">
-                    <img
-                      src="/img/6dadaa4a-433b-4869-ace7-abccb497a704.jpg"
-                      alt="Wedding rings"
-                      className="w-24 h-24 object-cover rounded-full shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-rose-400/20 rounded-full" />
-                  </div>
-                </div>
+        <div className="max-w-2xl mx-auto space-y-16">
+          {/* Invitation Text */}
+          <div className="text-center space-y-8">
+            <div className="w-12 h-px bg-slate-300 mx-auto" />
 
-                <h2 className="text-3xl font-serif font-bold text-slate-800 mb-4">
-                  Дорогие друзья!
-                </h2>
+            <p className="text-base text-slate-600 leading-relaxed font-light max-w-lg mx-auto">
+              Мы счастливы пригласить вас разделить с нами один из самых важных
+              дней в нашей жизни
+            </p>
 
-                <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                  Мы счастливы пригласить вас разделить с нами один из самых
-                  важных дней в нашей жизни. Ваше присутствие сделает наш
-                  праздник еще более особенным и радостным.
-                </p>
-
-                <div className="flex justify-center">
-                  <Badge
-                    variant="outline"
-                    className="text-rose-600 border-rose-200 px-4 py-2"
-                  >
-                    <Icon name="Shirt" size={16} className="mr-2" />
-                    Дресс-код: Классика
-                  </Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            <div className="inline-block border border-slate-200 px-6 py-2">
+              <span className="text-xs text-slate-500 font-light tracking-widest uppercase">
+                Дресс-код: Классика
+              </span>
+            </div>
+          </div>
 
           {/* Schedule */}
-          <Card className="bg-white/80 backdrop-blur-sm border-rose-200 shadow-lg">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-8 text-center">
-                Программа празднования
-              </h3>
+          <div className="space-y-8">
+            <div className="w-12 h-px bg-slate-300 mx-auto" />
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-4 rounded-lg bg-rose-50/50">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
-                      <Icon name="Users" size={20} className="text-rose-600" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Clock" size={16} className="text-rose-600" />
-                      <span className="font-semibold text-rose-600">12:00</span>
-                    </div>
-                    <h4 className="text-lg font-semibold text-slate-800 mb-1">
-                      Торжественная роспись
-                    </h4>
-                    <p className="text-slate-600">
-                      Официальная церемония бракосочетания
-                    </p>
-                  </div>
+            <div className="space-y-6">
+              <div className="flex items-center justify-between py-4 border-b border-slate-100">
+                <div>
+                  <h4 className="text-sm font-light text-slate-900">
+                    Торжественная роспись
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    Официальная церемония
+                  </p>
                 </div>
-
-                <Separator className="bg-rose-200" />
-
-                <div className="flex items-start gap-4 p-4 rounded-lg bg-rose-50/50">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
-                      <Icon name="Camera" size={20} className="text-rose-600" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Clock" size={16} className="text-rose-600" />
-                      <span className="font-semibold text-rose-600">12:30</span>
-                    </div>
-                    <h4 className="text-lg font-semibold text-slate-800 mb-1">
-                      Фотосессия
-                    </h4>
-                    <p className="text-slate-600">
-                      Запечатлеем самые яркие моменты
-                    </p>
-                  </div>
-                </div>
-
-                <Separator className="bg-rose-200" />
-
-                <div className="flex items-start gap-4 p-4 rounded-lg bg-rose-50/50">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
-                      <Icon
-                        name="PartyPopper"
-                        size={20}
-                        className="text-rose-600"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Clock" size={16} className="text-rose-600" />
-                      <span className="font-semibold text-rose-600">15:00</span>
-                    </div>
-                    <h4 className="text-lg font-semibold text-slate-800 mb-1">
-                      Праздничный банкет
-                    </h4>
-                    <p className="text-slate-600">
-                      Ужин, танцы и веселье до утра
-                    </p>
-                  </div>
-                </div>
+                <span className="text-sm font-light text-slate-900">12:00</span>
               </div>
-            </CardContent>
-          </Card>
+
+              <div className="flex items-center justify-between py-4 border-b border-slate-100">
+                <div>
+                  <h4 className="text-sm font-light text-slate-900">
+                    Фотосессия
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    Запечатлеем яркие моменты
+                  </p>
+                </div>
+                <span className="text-sm font-light text-slate-900">12:30</span>
+              </div>
+
+              <div className="flex items-center justify-between py-4">
+                <div>
+                  <h4 className="text-sm font-light text-slate-900">
+                    Праздничный банкет
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    Ужин, танцы и веселье
+                  </p>
+                </div>
+                <span className="text-sm font-light text-slate-900">15:00</span>
+              </div>
+            </div>
+          </div>
 
           {/* RSVP Section */}
-          <Card className="bg-gradient-to-r from-rose-100 to-pink-100 border-rose-200 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6">
-                Подтверждение участия
-              </h3>
-              <p className="text-slate-600 mb-8 text-lg">
-                Пожалуйста, подтвердите свое участие до 25 августа 2025 года
+          <div className="text-center space-y-8">
+            <div className="w-12 h-px bg-slate-300 mx-auto" />
+
+            <div className="space-y-6">
+              <p className="text-sm text-slate-600 font-light">
+                Подтвердите участие до 25 августа
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  size="lg"
-                  className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3"
+                  variant="outline"
+                  size="sm"
+                  className="border-slate-300 text-slate-900 hover:bg-slate-50 px-8 py-2 font-light"
                 >
-                  <Icon name="Check" size={20} className="mr-2" />
                   Буду участвовать
                 </Button>
                 <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-rose-200 text-rose-600 hover:bg-rose-50 px-8 py-3"
+                  variant="ghost"
+                  size="sm"
+                  className="text-slate-600 hover:bg-slate-50 px-8 py-2 font-light"
                 >
-                  <Icon name="MessageCircle" size={20} className="mr-2" />
-                  Связаться с нами
+                  Связаться
                 </Button>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Footer */}
-          <div className="text-center py-8">
-            <p className="text-slate-500 text-sm mb-4">
-              С любовью и нетерпением ждем встречи с вами!
+          <div className="text-center py-12">
+            <div className="w-12 h-px bg-slate-300 mx-auto mb-6" />
+            <p className="text-xs text-slate-400 font-light tracking-wide">
+              С любовью
             </p>
-            <div className="flex justify-center gap-2">
-              <Icon name="Heart" size={16} className="text-rose-400" />
-              <Icon name="Heart" size={16} className="text-rose-400" />
-              <Icon name="Heart" size={16} className="text-rose-400" />
-            </div>
           </div>
         </div>
       </div>
